@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>Latynizator</title>
+
+    <link rel="stylesheet" type="text/css" href="style_common.css">
+    <link rel="stylesheet" type="text/css" href="style_mobile.css">
+    <link rel="stylesheet" type="text/css" href="style_tablet.css">
+
+    <meta property="og:title" content="Latynizator">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://opengraph.githubassets.com/61149338fe21cc119320051d9a42c3304c2734c8c3e5c42d6fe079c464d63517/DawidNet7/Latynizator">
+    <meta property="og:type" content="website">
+    <meta name="google-site-verification" content="wAGhX4LkYnAmPEhF39cfiQo0dLq8n4a9ROpezHIDMyQ" />
+
+    <script src="latynizator1.js"></script>
+    <script src="latynizator2.js"></script>
+    <script src="latynizator3.js"></script>
+    <script src="latynizator4.js"></script>
+    <script src="latynizator101.js"></script>
+    <script src="latynizator102.js"></script>
+    <!-- NOWE SPOSOBY -->
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="version">
+                <h3>v1.1</h3>
+            </div>
+
+            <div class="title">
+                <h3>LATYNIZATOR</h3>
+            </div>
+            <div class="icons">
+            <div class="discord">
+                <a href="https://discord.gg/gGUDZBQKk5" target="_blank" class="discord-icon" title="Discord">
+                    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" alt="Discord">
+                </a>
+            </div>
+            <div class="notes">
+                <a href="https://docs.google.com/document/d/1D4TsYAF2FN2estS3Ch-sBpYgMThU7hLTrcMhVaPCZsI/edit?usp=sharing" target="_blank" class="notes-icon" title="Tabela latynizacji">
+                    <img src="https://i.imgur.com/2vcnQfa.png" alt="notes-icon">
+                </a>
+            </div>
+            </div>
+            <div class="menu">
+                <button class="menubtn" title="Menu"></button>
+                <div class="menu-content">
+                    <a href="https://docs.google.com/document/d/1D4TsYAF2FN2estS3Ch-sBpYgMThU7hLTrcMhVaPCZsI/edit?usp=sharing" target="_blank" class="icon-link" title="Tabela latynizacji">
+                        <img src="https://i.imgur.com/2vcnQfa.png" alt="Tabela" class="menu-notes-icon">
+                    </a>
+                    <a href="https://discord.gg/gGUDZBQKk5" target="_blank" class="icon-link" title="Discord">
+                        <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6cc3c481a15a141738_icon_clyde_white_RGB.png" alt="Discord" class="menu-discord-icon">
+                    </a>
+                </div>                
+                </div>
+              </div>
+        </div>   
+    </header>    
+    <div class="input-container">
+        <div class="select-container">
+            <label for="transliterationMethod">Metoda latynizacji: </label>
+            <select id="transliterationMethod">
+            <option value="latynizator1">[ru/uk/be] ISO 9</option>
+            <option value="latynizator2">[ru] BGN/PCGN</option>
+            <option value="latynizator3">[ru] PN-83/N-01201</option>
+            <option value="latynizator101">[ru] autorska 1</option>
+            <option value="latynizator102">[ru] autorska 2</option>
+            
+            <!-- NOWE SPOSOBY -->
+            </select>       
+        </div> 
+        <textarea id="inputText" rows="10" placeholder="Wprowadź tekst do zlatynizowania..."></textarea>
+        <button class="latynizujbtn" onclick="transliterate()">Latynizuj</button>
+    </div>    
+        <div class="output-container">
+        <h2>Zlatynizowany tekst:</h2>
+        <p id="outputText"></p>
+    </div>
+    <script src="functions.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

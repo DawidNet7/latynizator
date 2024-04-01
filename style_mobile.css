@@ -1,0 +1,149 @@
+@media only screen and (max-width: 600px)
+    /* Styl dla urządzeń o szerokości do 600px  */
+
+{
+
+   header {
+    position: static;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 7px 0;
+    margin: 0;
+    font-family: 'Calibri';
+    font-size: 22px;
+   }
+   
+   .header-container {
+       align-items: center;
+       padding: 0 7px;
+       display: flex;
+       justify-content: space-between;
+   }
+   
+   .input-container {
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       justify-content: center; 
+       align-items: center; 
+       width: 80%;
+       margin: 60px 10%; 
+    }
+    
+    select { 
+        margin: 0 auto; 
+        margin-bottom: -20px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        font-size: 1em;
+    }
+    
+   .select-container {
+       position: static; 
+       width: 100%; 
+       text-align: center; 
+       margin-top: -25px;
+       margin-bottom: 20px; 
+       display: flex; 
+       flex-direction: column; 
+       padding: 0px 0px; 
+   }
+   
+   .output-container {
+       position: relative; 
+       width: 80%; 
+       margin: 30px 10%; 
+       margin-top: -25px;
+       label {
+       margin-bottom: 5px; 
+   }
+   }
+   
+   h2 {
+    text-align: center;
+    padding-left: 0;
+    }
+    
+    .menu {
+        position: relative;
+        display: inline-block;
+        align-self: center;
+        order: 3;
+        width: 28px;
+        height: 28px;
+      }
+
+      .menu:hover .menu-content {
+        display: none;
+    }    
+    
+    .icon-link {
+        display: inline-block;
+        margin-right: 0px; 
+    }
+    
+    .menu-notes-icon {
+        width: 28px;
+        height: 28px;
+        order: 0;
+    }
+
+    .menu-discord-icon {
+        width: 31.5px;
+        height: 23.86px;
+        order: 9;
+    }
+      
+      .menu-content {
+        display: none;
+        position: absolute;
+        background-color: #4CAF50;
+        max-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        align-items: center;
+        border-radius: 4px;
+        right: -6.5px;
+        margin-top: 7.5px;
+      }
+      
+      .menu-content a {
+        padding: 8px 8px;
+        color: black;
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .menu-content img {
+        margin-right: 0px;
+    }
+    
+    .menubtn {
+        background: url('https://i.imgur.com/ykw45Vm.png') /*no-repeat*/; 
+        background-size: 100%;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        padding: 0;
+        width: 25px;
+        height: 25px;
+        margin-top: 1px;
+        margin-left: -7.25px;
+        align-self: center;
+    }
+
+    .notes, .discord {
+        display: none;
+    }
+
+   } 
+
+
+   

@@ -1,0 +1,229 @@
+/* Główny styl dokumentu */
+body {
+    min-width: 300px;
+    min-height: 100px !important;
+    font-family: 'Calibri';
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s ease;
+    background-color: #11171F;
+    color: white;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box; 
+}
+
+
+header {
+    position: static;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0;
+    font-family: 'Calibri';
+    font-size: 25px;
+}
+
+.header-container {
+    padding: 0 7px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title
+{
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+
+h3
+{
+    padding: 0;
+    margin: 0;
+}
+
+.version h3
+{
+    margin-left: 5px;
+    margin-top: 0;
+    font-size: 90%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.icons {
+    padding: 0 5px;
+    display: flex;
+    justify-content: flex-end;
+    right: 5px;
+}
+
+.notes
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    align-items: center;
+    order: 1;
+    margin-right: 7px;
+}
+
+.notes-icon 
+{
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-self: center;
+}
+
+.notes-icon img 
+{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.discord
+{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    width: 31.5px;
+    height: 23.86px;
+    order: 2;
+}
+
+.discord-icon 
+{
+    display: flex;
+    align-self: center;
+    width: 31.5px;
+    height: 23.86px;
+}
+
+.discord-icon img 
+{
+    width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.input-container {
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: flex-end; 
+    width: 80%; 
+    margin: 30px 10%; 
+}
+
+select {
+    width: 160px; 
+    padding: 5px; 
+    margin-left: 7px;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    background-color: #f9f9f9; 
+    font-size: 1em; 
+}
+
+.select-container {
+    display: block; 
+    margin-left: auto; 
+    margin-right: 10%;
+    padding: 0px 0px; 
+}
+
+.output-container {
+    position: relative; 
+    width: 80%; 
+    margin: 30px 10%; 
+}
+
+textarea#inputText {
+    width: 80%;
+    margin-top: 0px;
+    margin: 5px 10%;
+    padding: 7px;
+    font-size: 1em;
+    font-family: 'Calibri';
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize:none
+}
+
+.latynizujbtn {
+    display: block; 
+    margin-left: auto; 
+    margin-right: 10%;
+    margin-top: 5px; 
+    padding: 9px 14px; 
+    background-color: #008CBA; 
+    font-size: 0.95em;
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+}
+
+.latynizujbtn:hover {
+    background-color: #005f73; 
+}
+
+/* Zlatynizowany tekst: */
+h2 { 
+    text-align: left;
+    padding-left: 10%;
+}
+
+p#outputText {
+    width: 80%;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 5px 10%;
+    margin-top: -10px;
+    white-space: pre-wrap; 
+    color: black;
+    font-family: 'Calibri';
+}
+
+
+.menu {
+    display: none;
+  }
+  
+  .menu-content {
+    display: none;
+  }
+  
+  .menu-content a {
+    display: none;
+  }
+  
+  .menu:hover .menu-content {
+    display: none;
+  }
