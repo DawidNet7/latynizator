@@ -214,6 +214,22 @@ p#outputText {
     font-family: 'Calibri';
 }
 
+p#defaultText {
+    width: 80%;
+    min-height: 42px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 30px 10%;
+    margin-top: -10px;
+    margin-bottom: 0;
+    white-space: pre-wrap; 
+    color: #757587;
+    font-family: 'Calibri';
+}
+
 button, #copybtn {
     display: block; 
     margin-left: auto; 

@@ -18,9 +18,22 @@ function transliterate() {
         case 'latynizator102':
             outputText = transliterateRussianToLatin102(inputText);
             break;    
+        case 'latynizator103':
+            outputText = transliterateRussianToLatin103(inputText);
+            break;        
         // NOWE SPOSOBY
     }
-    document.getElementById('outputText').innerText = outputText;
+    let outputTextElement = document.getElementById('outputText');
+    let defaultTextElement = document.getElementById('defaultText');
+    if (outputText === '') {
+        outputTextElement.style.display = 'none';
+        defaultTextElement.style.display = 'block';
+    } else {
+        outputTextElement.innerText = outputText;
+        outputTextElement.style.display = 'block';
+        defaultTextElement.style.display = 'none';
+    }
+
     detectDevice();
 }
 
@@ -35,5 +48,3 @@ function detectDevice() {
         console.log("Uruchomiono na komputerze stacjonarnym.");
     }
 }
-
-
