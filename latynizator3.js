@@ -19,8 +19,8 @@ function transliterateRussianToLatin3(input) {
             let char = word[j];
             if (transliterationMap3.hasOwnProperty(char)) {
                 char = transliterationMap3[char];
-                if (word === word.toUpperCase()) { // Jeśli wszystkie litery w słowie są duże
-                    char = char.toUpperCase(); // Zamień na duże litery
+                if (word.length > 1 && word === word.toUpperCase()) { 
+                    char = char.toUpperCase(); 
                 }
             }
             output += char;

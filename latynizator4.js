@@ -36,7 +36,7 @@ function transliterateRussianToLatin4(input) {
                     char = (char === 'Ю') ? 'U' : (char === 'ю') ? 'u' : (char === 'Я') ? 'A' : 'a';
                 } else {
                     char = transliterationMap4[char];
-                    if (word === word.toUpperCase()) { 
+                    if (word.length > 1 && word === word.toUpperCase()) { 
                         char = char.toUpperCase(); 
                     }
                 }

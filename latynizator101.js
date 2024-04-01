@@ -20,7 +20,7 @@ function transliterateRussianToLatin101(input) {
             if (transliterationMap101.hasOwnProperty(char)) {
            {char = transliterationMap101[char];}
                 // Jeśli całe słowo w cyrylicy jest zapisywane dużymi literami, zapisz je dużymi
-                if (word === word.toUpperCase()) {
+                if (word.length > 1 && word === word.toUpperCase()) {
                     char = char.toUpperCase();
                 }
             }

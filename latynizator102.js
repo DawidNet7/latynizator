@@ -39,7 +39,7 @@ function transliterateRussianToLatin102(input) {
                 char += transliterationMap102[nextChar] || nextChar;
             }
         }
-        if (word === word.toUpperCase()) {
+        if (word.length > 1 && word === word.toUpperCase()) {
             char = char.toUpperCase();
         }
         output += char;
