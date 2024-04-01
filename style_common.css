@@ -165,20 +165,21 @@ textarea#inputText {
     width: 80%;
     margin-top: 0px;
     margin: 5px 10%;
+    margin-bottom: 0;
     padding: 7px;
     font-size: 1em;
     font-family: 'Calibri';
     border: 1px solid #ddd;
     border-radius: 4px;
-    resize:none
+    resize: none;
 }
 
 .latynizujbtn {
     display: block; 
     margin-left: auto; 
     margin-right: 10%;
-    margin-top: 5px; 
-    padding: 9px 14px; 
+    margin-top: 10px; 
+    padding: 9px 12px; 
     background-color: #008CBA; 
     font-size: 0.95em;
     color: white; 
@@ -199,18 +200,37 @@ h2 {
 
 p#outputText {
     width: 80%;
+    min-height: 42px;
     border: 1px solid #ddd;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 4px;
     padding: 10px;
-    margin: 5px 10%;
+    margin: 30px 10%;
     margin-top: -10px;
+    margin-bottom: 0;
     white-space: pre-wrap; 
     color: black;
     font-family: 'Calibri';
 }
 
+button, #copybtn {
+    display: block; 
+    margin-left: auto; 
+    margin-right: 10%;
+    margin-top: 10px; 
+    padding: 9px 12px; 
+    background-color: #008CBA; 
+    font-size: 0.95em;
+    color: white; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer;
+}
+
+button:hover, #copybtn:hover {
+    background-color: #005f73; 
+}
 
 .menu {
     display: none;
