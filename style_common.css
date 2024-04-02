@@ -230,7 +230,7 @@ p#defaultText {
     font-family: 'Calibri';
 }
 
-button, #copybtn {
+#copybtn {
     display: block; 
     margin-left: auto; 
     margin-right: 10%;
@@ -244,7 +244,7 @@ button, #copybtn {
     cursor: pointer;
 }
 
-button:hover, #copybtn:hover {
+#copybtn:hover {
     background-color: #005f73; 
 }
 
