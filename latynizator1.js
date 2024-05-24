@@ -1,3 +1,5 @@
+// Code fix by: nameless_from_poland (Discord)
+
 const transliterationMap1 = {
     'А': 'A', 'а': 'a', 'Б': 'B', 'б': 'b', 'В': 'V', 'в': 'v', 'Г': 'G', 'г': 'g',
     'Д': 'D', 'д': 'd', 'Е': 'E', 'е': 'e', 'Ё': 'Ë', 'ё': 'ë', 'Ж': 'Ž', 'ж': 'ž',

@@ -11,6 +11,7 @@ const transliterationMap4 = {
 };
 
 function transliterateRussianToLatin4(input) {
+	alert(1);
     let output = '';
     const words = input.split(' ');
     for (let i = 0; i < words.length; i++) {

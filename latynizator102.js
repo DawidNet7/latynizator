@@ -1,3 +1,5 @@
+// Code fix by: nameless_from_poland (Discord)
+
 const transliterationMap102 = {
     'А': 'A', 'а': 'a', 'Б': 'B', 'б': 'b', 'В': 'V', 'в': 'v', 'Г': 'G', 'г': 'g',
     'Д': 'D', 'д': 'd', 'Е': 'É', 'е': 'é', 'Ё': 'Ó', 'ё': 'ó', 'Ж': 'Ž', 'ж': 'ž',
@@ -22,30 +24,36 @@ const vowels = ['а', 'э', 'и', 'о', 'у', 'ы', 'е', 'ё', 'ю', 'я', 'А'
 
 function transliterateRussianToLatin102(input) {
     let output = '';
-    const words = input.split(' ');
-    for (let i = 0; i < words.length; i++) {
-        const word = words[i];
-        let char;
-        if (firstLetterExceptions[word[0]]) {
-            char = firstLetterExceptions[word[0]];
-        } else {
-            char = transliterationMap102[word[0]] || word[0];
-        }
-        for (let j = 1; j < word.length; j++) {
-            const nextChar = word[j];
-            if (vowels.includes(word[j - 1]) && afterVowelExceptions[nextChar]) {
-                char += afterVowelExceptions[nextChar];
-            } else {
-                char += transliterationMap102[nextChar] || nextChar;
-            }
-        }
-        if (word.length > 1 && word === word.toUpperCase()) {
-            char = char.toUpperCase();
-        }
-        output += char;
-        if (i < words.length - 1) {
-            output += ' ';
-        }
-    }
+	const sentences = input.split("\n");
+    for (let k = 0; k < sentences.length; k++) {
+		const words = sentences[k].split(' ');
+		for (let i = 0; i < words.length; i++) {
+			const word = words[i];
+			if (word.length == 0) {
+				output += ' '
+				continue;
+			}
+			let char = transliterationMap102[word[0]] || word[0]
+			if (firstLetterExceptions[word[0]]) {
+				char = firstLetterExceptions[word[0]];
+			}
+			for (let j = 1; j < word.length; j++) {
+				const nextChar = word[j];
+				if (vowels.includes(word[j - 1]) && afterVowelExceptions[nextChar]) {
+					char += afterVowelExceptions[nextChar];
+				} else {
+					char += transliterationMap102[nextChar] || nextChar;
+				}
+			}
+			if (word.length > 1 && word === word.toUpperCase()) {
+				char = char.toUpperCase();
+			}
+			output += char;
+			if (i < words.length - 1) {
+				output += ' ';
+			}
+		}
+		output += "\n";
+	}
     return output;
 }

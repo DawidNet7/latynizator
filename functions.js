@@ -20,7 +20,10 @@ function transliterate() {
             break;    
         case 'latynizator103':
             outputText = transliterateRussianToLatin103(inputText);
-            break;        
+            break;      
+        case 'latynizator104':
+            outputText = transliterateRussianToLatin104(inputText);
+            break;       
         // NOWE SPOSOBY
     }
     let outputTextElement = document.getElementById('outputText');

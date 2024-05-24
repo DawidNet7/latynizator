@@ -1,3 +1,5 @@
+// Code fix by: nameless_from_poland (Discord)
+
 const transliterationMap103 = {
     'А': 'A', 'а': 'a', 'Б': 'B', 'б': 'b', 'В': 'W', 'в': 'w', 'Г': 'G', 'г': 'g',
     'Д': 'D', 'д': 'd', 'Е': 'Je', 'е': 'je', 'Ё': 'Jo', 'ё': 'jo', 'Ж': 'Ż', 'ж': 'ż',
@@ -10,7 +12,7 @@ const transliterationMap103 = {
     'Я': 'Ja', 'я': 'ja',
 };
 
-function transliterateRussianToLatin103(input) {
+function transliterateRussianToLatin103_tmp(input) {
     let output = '';
     const words = input.split(' ');
     for (let i = 0; i < words.length; i++) {
@@ -29,5 +31,34 @@ function transliterateRussianToLatin103(input) {
             output += ' ';
         }
     }
+    return output;
+}
+
+function transliterateRussianToLatin103(input) {
+    let output = '';
+	const sentences = input.split("\n");
+    for (let k = 0; k < sentences.length; k++) {
+		const words = sentences[k].split(' ');
+		for (let i = 0; i < words.length; i++) {
+			const word = words[i];
+			if (word.length == 0) {
+				output += ' '
+				continue;
+			}
+			let char = "";
+			for (let j = 0; j < word.length; j++) {
+				const nextChar = word[j];
+				char += transliterationMap103[nextChar];
+			}
+			if (word.length > 1 && word === word.toUpperCase()) {
+				char = char.toUpperCase();
+			}
+			output += char;
+			if (i < words.length - 1) {
+				output += ' ';
+			}
+		}
+		output += "\n";
+	}
     return output;
 }
