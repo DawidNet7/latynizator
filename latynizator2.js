@@ -9,7 +9,7 @@ const transliterationMap2 = {
     'У': 'U', 'у': 'u', 'Ф': 'F', 'ф': 'f', 'Х': 'Kh', 'х': 'kh', 'Ц': 'Ts', 'ц': 'ts',
     'Ч': 'Ch', 'ч': 'ch', 'Ш': 'Sh', 'ш': 'sh', 'Щ': 'Shch', 'щ': 'shch', 'Ъ': 'ʺ', 'ъ': 'ʺ',
     'Ы': 'Y', 'ы': 'y', 'Ь': "'", 'ь': "'", 'Э': 'E', 'э': 'e', 'Ю': 'Yu', 'ю': 'yu',
-    'Я': 'Ya', 'я': 'ya',
+    'Я': 'Ya', 'я': 'ya', ',': ',', '-': '-'
 };
 
 function transliterateRussianToLatin2(input) {

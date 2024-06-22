@@ -9,7 +9,7 @@ const transliterationMap3 = {
     'У': 'U', 'у': 'u', 'Ф': 'F', 'ф': 'f', 'Х': 'Ch', 'х': 'ch', 'Ц': 'C', 'ц': 'c',
     'Ч': 'Č', 'ч': 'č', 'Ш': 'Š', 'ш': 'š', 'Щ': 'Šč', 'щ': 'šč', 'Ъ': 'ʺ', 'ъ': 'ʺ',
     'Ы': 'Y', 'ы': 'y', 'Ь': "'", 'ь': "'", 'Э': 'È', 'э': 'è', 'Ю': 'Ju', 'ю': 'ju',
-    'Я': 'Ja', 'я': 'ja'
+    'Я': 'Ja', 'я': 'ja', ',': ',', '-': '-'
 };
 
 function transliterateRussianToLatin3(input) {
@@ -26,7 +26,7 @@ function transliterateRussianToLatin3(input) {
 			let char = "";
 			for (let j = 0; j < word.length; j++) {
 				const nextChar = word[j];
-				char += transliterationMap3[nextChar];
+				char += transliterationMap3[nextChar] || nextChar;
 			}
 			if (word.length > 1 && word === word.toUpperCase()) {
 				char = char.toUpperCase();

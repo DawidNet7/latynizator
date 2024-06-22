@@ -1,3 +1,5 @@
+// Code fix by: nameless_from_poland (Discord)
+
 const transliterationMap4 = {
     'А': 'A', 'а': 'a', 'Б': 'B', 'б': 'b', 'В': 'W', 'в': 'W', 'Г': 'G', 'г': 'g',
     'Д': 'D', 'д': 'd', 'Е': 'Ie', 'е': 'ie', 'Ё': 'Io', 'ё': 'io', 'Ж': 'Ż', 'ж': 'ż',
@@ -7,7 +9,7 @@ const transliterationMap4 = {
     'У': 'U', 'у': 'u', 'Ф': 'F', 'ф': 'f', 'Х': 'Ch', 'х': 'ch', 'Ц': 'C', 'ц': 'c',
     'Ч': 'Cz', 'ч': 'cz', 'Ш': 'Sz', 'ш': 'sz', 'Щ': 'Szcz', 'щ': 'szcz', 'Ъ': '', 'ъ': '',
     'Ы': 'Y', 'ы': 'y', 'Ь': "'", 'ь': "'", 'Э': 'E', 'э': 'e', 'Ю': 'Iu', 'ю': 'iu',
-    'Я': 'Ia', 'я': 'ia',
+    'Я': 'Ia', 'я': 'ia', ',': ',', '-': '-'
 };
 
 function transliterateRussianToLatin4(input) {

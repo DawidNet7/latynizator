@@ -9,7 +9,7 @@ const transliterationMap103 = {
     'У': 'U', 'у': 'u', 'Ф': 'F', 'ф': 'f', 'Х': 'Ch', 'х': 'ch', 'Ц': 'C', 'ц': 'c',
     'Ч': 'Ć', 'ч': 'ć', 'Ш': 'Sz', 'ш': 'sz', 'Щ': 'Ś', 'щ': 'ś', 'Ъ': '', 'ъ': '',
     'Ы': 'Y', 'ы': 'y', 'Ь': "'", 'ь': "'", 'Э': 'E', 'э': 'e', 'Ю': 'Ju', 'ю': 'ju',
-    'Я': 'Ja', 'я': 'ja',
+    'Я': 'Ja', 'я': 'ja', ',': ',', '-': '-'
 };
 
 function transliterateRussianToLatin103_tmp(input) {
@@ -48,7 +48,7 @@ function transliterateRussianToLatin103(input) {
 			let char = "";
 			for (let j = 0; j < word.length; j++) {
 				const nextChar = word[j];
-				char += transliterationMap103[nextChar];
+				char += transliterationMap103[nextChar] || nextChar;
 			}
 			if (word.length > 1 && word === word.toUpperCase()) {
 				char = char.toUpperCase();
